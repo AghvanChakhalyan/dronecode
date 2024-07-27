@@ -1,0 +1,26 @@
+import CoDrone_mini
+from CoDrone_mini import Direction, Note
+
+drone = CoDrone_mini.CoDrone()
+drone.pair()
+# drone.turn_off_LED()
+drone.takeoff()
+# drone.go(Direction.FORWARD,3)
+# drone.go(Direction.BACKWARD,5)
+# drone.reset_sensor()
+drone.flip(Direction.LEFT)
+
+# drone.fly_spiral()
+# drone.flip()
+# drone.turn(Direction.LEFT,180)
+# drone.turn(Direction.LEFT,180)
+# pre = drone.get_pressure()
+height = drone.get_height()
+temperature = drone.get_drone_temp()
+patarey = drone.get_battery_percentage()
+print ("height = ",height)
+print("temperature =",temperature, "%" )
+print("paterey = ",patarey,"%")
+# print(pre)
+drone.land()
+drone.close()
